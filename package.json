@@ -1,0 +1,14 @@
+{
+  "name": "kyokaikenpo",
+  "version": "1.0.0",
+  "description": "Insurance rates from the Japan Health Insurance Association",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "toku-tomi",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
