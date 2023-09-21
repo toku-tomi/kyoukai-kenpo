@@ -1,21 +1,26 @@
 import * as fs from "node:fs/promises";
 import * as path from "path";
 import { copy } from "fs-extra";
+import { payGradesJson } from "@/json-pages/pay-grades";
 
 async function main(): Promise<void> {
   const artifactsDir = path.join(__dirname, "..", "dist");
   const publicDir = path.join(__dirname, "..", "public");
 
-  // cleanup
+  // クリーンアップ
   await fs.rm(artifactsDir, { recursive: true, force: true });
-
-  // make directory
   await fs.mkdir(artifactsDir);
 
-  // copy public files
+  // 静的ファイルコピー
   await copy(publicDir, artifactsDir);
 
-  // TODO: build json
+  // JSONファイル生成
+  const results = [];
+
+  // 等級区分 /pay-grades/{type}
+  results.push(payGradesJson(artifactsDir));
+
+  await Promise.all(results);
 }
 
 main()
