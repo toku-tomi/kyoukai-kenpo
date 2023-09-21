@@ -3,6 +3,7 @@ import * as path from "path";
 import { copy } from "fs-extra";
 import { payGradesJson } from "@/json-pages/pay-grades";
 import { prefecturesJson } from "./json-pages/prefectures";
+import { termsJson } from "./json-pages/terms";
 
 async function main(): Promise<void> {
   const artifactsDir = path.join(__dirname, "..", "dist");
@@ -23,6 +24,9 @@ async function main(): Promise<void> {
 
   // 都道府県 /prefectures
   results.push(prefecturesJson(artifactsDir));
+
+  // 期間 /terms
+  results.push(termsJson(artifactsDir));
 
   await Promise.all(results);
 }
