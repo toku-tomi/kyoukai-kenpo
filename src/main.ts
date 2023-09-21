@@ -2,6 +2,7 @@ import * as fs from "node:fs/promises";
 import * as path from "path";
 import { copy } from "fs-extra";
 import { payGradesJson } from "@/json-pages/pay-grades";
+import { prefecturesJson } from "./json-pages/prefectures";
 
 async function main(): Promise<void> {
   const artifactsDir = path.join(__dirname, "..", "dist");
@@ -19,6 +20,9 @@ async function main(): Promise<void> {
 
   // 等級区分 /pay-grades/{type}
   results.push(payGradesJson(artifactsDir));
+
+  // 都道府県 /prefectures
+  results.push(prefecturesJson(artifactsDir));
 
   await Promise.all(results);
 }
