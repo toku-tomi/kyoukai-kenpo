@@ -1,0 +1,19 @@
+name: Deploy pages
+on:
+  # push:
+  #   branches:
+  #     - "main"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/setup-nodejs-app
+        with:
+          no-save-cache: true
+
+      # TODO: build & deploy
