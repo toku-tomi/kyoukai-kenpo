@@ -4,6 +4,7 @@ import { copy } from "fs-extra";
 import { payGradesJson } from "@/json-pages/pay-grades";
 import { prefecturesJson } from "./json-pages/prefectures";
 import { termsJson } from "./json-pages/terms";
+import { ratesJson } from "./json-pages/terms.[term].rates";
 
 async function main(): Promise<void> {
   const artifactsDir = path.join(__dirname, "..", "dist");
@@ -27,6 +28,9 @@ async function main(): Promise<void> {
 
   // 期間 /terms
   results.push(termsJson(artifactsDir));
+
+  // 料率 /rates
+  results.push(ratesJson(artifactsDir));
 
   await Promise.all(results);
 }
