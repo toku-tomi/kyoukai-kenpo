@@ -121,13 +121,13 @@ const HEALTH_RATES_FOR_R4_03: HealthRateData[] = [
 ];
 
 export const RATE_DATA_BY_TERM: Record<string, RateData> = {
-  r5_03: {
+  "r5-03": {
     healthRateDataList: HEALTH_RATES_FOR_R5_03,
     nursingRate: 0.0182,
     pensionRate: 0.183,
     childcareRate: 0.0036,
   },
-  r4_03: {
+  "r4-03": {
     healthRateDataList: HEALTH_RATES_FOR_R4_03,
     nursingRate: 0.0164,
     pensionRate: 0.183,
