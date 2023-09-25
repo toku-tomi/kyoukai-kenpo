@@ -1,0 +1,29 @@
+name: Test
+on:
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/setup-nodejs-app
+        with:
+          no-save-cache: true
+
+      - name: Lint
+        run: npm run lint
+
+  lint-doc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/setup-nodejs-app
+        with:
+          no-save-cache: true
+
+      - name: Lint document
+        run: npm run lint-doc
