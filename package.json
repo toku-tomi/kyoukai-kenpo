@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Insurance rates from the Japan Health Insurance Association",
   "scripts": {
-    "build": "ts-node -r tsconfig-paths/register src/main.ts"
+    "build": "ts-node -r tsconfig-paths/register src/main.ts",
+    "build-doc": "redocly build-docs openapi/index.yml -o dist/index.html",
+    "lint-doc": "redocly lint openapi/index.yml",
+    "preview-doc": "redocly preview-docs openapi/index.yml"
   },
   "author": "toku-tomi",
   "license": "MIT",
@@ -15,6 +18,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@redocly/cli": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",

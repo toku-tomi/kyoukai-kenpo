@@ -1,0 +1,19 @@
+openapi: "3.1.0"
+info:
+  version: 1.0.0
+  title: "協会けんぽ 保険料率API"
+  description: 全国健康保険協会（協会けんぽ）の保険料率などのデータをjson形式で公開しています。
+  license:
+    name: MIT
+    identifier: MIT
+servers:
+  - url: https://toku-tomi.github.io/kyoukai-kenpo
+paths:
+  /v1/pay-grades/{gradeType}/:
+    $ref: "./paths/v1/pay-grades.[gradeType].yml"
+  /v1/prefectures/:
+    $ref: "./paths/v1/prefectures.yml"
+  /v1/terms/:
+    $ref: "./paths/v1/terms.yml"
+  /v1/terms/{term}/rates/:
+    $ref: "./paths/v1/terms.[term].rates.yml"

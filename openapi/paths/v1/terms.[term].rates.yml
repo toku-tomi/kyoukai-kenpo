@@ -1,0 +1,14 @@
+get:
+  summary: 47都道府県の保険料率を取得
+  operationId: get-terms-term-rates
+  parameters:
+    - $ref: "../../parameters/path/term.yml"
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/Rate.yml"

@@ -1,0 +1,25 @@
+type: object
+required:
+  - grade
+  - minPay
+  - maxPay
+  - standardPay
+properties:
+  grade:
+    type: integer
+    description: 等級
+    example: 1
+  minPay:
+    type: integer
+    description: 報酬月額（下限）
+    example: 0
+  maxPay:
+    type:
+      - integer
+      - "null"
+    description: 報酬月額（上限）。null の場合は上限なし
+    example: 62999
+  standardPay:
+    type: integer
+    description: 標準報酬月額
+    example: 58000

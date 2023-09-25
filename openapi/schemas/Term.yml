@@ -1,0 +1,25 @@
+type: object
+required:
+  - code
+  - name
+  - startDate
+  - endDate
+properties:
+  code:
+    type: string
+    description: 期間コード
+    example: r5-03
+  name:
+    type: string
+    description: 期間名称
+    example: 令和５年度
+  startDate:
+    type: string
+    description: 期間開始日（YYYY-MM-DD）
+    example: "2023-03-01"
+  endDate:
+    type:
+      - string
+      - "null"
+    description: 期間終了日（YYYY-MM-DD）。未定の場合は null
+    example: null

@@ -1,0 +1,12 @@
+get:
+  summary: 期間一覧を取得
+  operationId: get-terms
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/Term.yml"

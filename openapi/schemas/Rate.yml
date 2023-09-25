@@ -1,0 +1,28 @@
+type: object
+required:
+  - prefectureId
+  - healthRate
+  - nursingRate
+  - pensionRate
+  - childcareRate
+properties:
+  prefectureId:
+    type: integer
+    description: 都道府県ID
+    example: 1
+  healthRate:
+    type: number
+    description: 健康保険料率
+    example: 0.1
+  nursingRate:
+    type: number
+    description: 介護保険料率
+    example: 0.0182
+  pensionRate:
+    type: number
+    description: 厚生年金保険料率
+    example: 0.183
+  childcareRate:
+    type: number
+    description: 子ども・子育て拠出金料率
+    example: 0.0036
