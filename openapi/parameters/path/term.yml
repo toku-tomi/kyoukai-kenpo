@@ -1,0 +1,6 @@
+name: term
+in: path
+required: true
+description: 期間コード
+schema:
+  type: string

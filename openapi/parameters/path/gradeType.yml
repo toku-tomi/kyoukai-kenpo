@@ -1,0 +1,9 @@
+name: gradeType
+in: path
+required: true
+description: "報酬等級種別\n\ninsurance : 全国健康保険協会管掌健康保険料用\n\npension : 厚生年金保険料用"
+schema:
+  type: string
+  enum:
+    - insurance
+    - pension
