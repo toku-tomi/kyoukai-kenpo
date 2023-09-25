@@ -4,6 +4,7 @@
   "description": "Insurance rates from the Japan Health Insurance Association",
   "scripts": {
     "build": "ts-node -r tsconfig-paths/register src/main.ts",
+    "lint": "eslint",
     "build-doc": "redocly build-docs openapi/index.yml -o dist/index.html",
     "lint-doc": "redocly lint openapi/index.yml",
     "preview-doc": "redocly preview-docs openapi/index.yml"
